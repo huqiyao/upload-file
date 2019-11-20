@@ -35,7 +35,7 @@ var sftpStorage = require('multer-sftp');
 function newFileUpload(req,res,next){
     var storage = multer.diskStorage({
         destination:function (req,file,cb) {
-            cb(null,'files');
+            cb(null,'../../sources/upload-file');
         },
         filename:function (req,file,cb) {
             cb(null,file.originalname);
